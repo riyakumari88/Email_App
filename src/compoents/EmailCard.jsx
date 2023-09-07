@@ -10,7 +10,7 @@ const EmailCard = ({ emailData, onDelete,emailType}) => {
         <p className="para"> SUBJECT:{emailData.subject}</p>
         <p className="para"> DISCRIPTION:{emailData.description}</p>
       </div>
-      <button onClick={onDelete}>Delete</button>
+      <button onClick={() => onDelete(emailData.id,emailType)}>Delete</button>
     </>
   );
 };

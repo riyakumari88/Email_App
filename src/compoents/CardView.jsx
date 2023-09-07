@@ -4,12 +4,8 @@ import EmailCard from "./EmailCard";
 const CardView = () => {
   const [sentEmails, setSentEmails] = useState([]);
   const [draftEmails, setDraftEmails] = useState([]);
-  const [deleteEmailData, setDeleteEmailData] = useState(
-    sessionStorage.getItem("sendEmail")
-  );
-  const [deleteDraftData, setDeleteDraftData] = useState(
-    localStorage.getItem("draftEmail")
-  );
+
+
   useEffect(() => {
     try {
       const storedData = JSON.parse(sessionStorage.getItem("sendEmail"));
@@ -32,23 +28,20 @@ const CardView = () => {
     }
   }, []);
 
-  const deleteButtonClickedHandler = (emailType,emailData) => {
-    if (emailType === "Sent") {
-     let id= deleteEmailData.this.id;
-     if(emailData.id === id){
-      sessionStorage.removeItem(deleteEmailData);
-      setDeleteEmailData(null);
-     }
-      alert("data cleaned");
-    } else {
-      let idd =deleteDraftData.this.id;
-      if(emailData === idd){
-      localStorage.removeItem(deleteDraftData);
-      setDeleteDraftData(null);}
-      alert("data cleaed");
-    }
-  };
-
+ function  deleteButtonClickedHandler(id,emailType){
+//  console.log(id)
+//  console.log(emailType)
+if(emailType === "Sent" ){
+  const newarray =sentEmails.filter( (mail)=>!mail);
+setSentEmails(newarray);
+sessionStorage.removeItem("sendEmail")
+}
+if(emailType === "Draft"){
+  const newarray = draftEmails.filter( (mails)=>!mails.id);
+  setDraftEmails(newarray);
+  localStorage.removeItem("draftEmail")
+}
+}
   return (
     <section className="cardView">
       <div className="cardView_child1">
