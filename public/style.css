@@ -1,0 +1,111 @@
+*{
+    padding: 0px;
+}
+/*.splitScreen{
+ 
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    height:100vh;
+}
+ */
+.form{
+    background-color: white ;
+}
+.cardView{
+    display:flex;
+    flex-direction: row; 
+    width:100%;
+   margin: 1rem 2rem;
+   padding: .5rem;
+   background-color: #B0AFFF;
+}
+.cardView_child1{
+    flex:1
+}
+.cardView_child2{
+    flex:1
+}
+
+.set_email_container{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+   border: 1px dashed #000;
+   margin-bottom: 1rem;
+   padding: 0.5rem;
+   margin-right:3rem;
+  }
+.para{
+    padding:0rem;
+    margin:0rem;
+}
+  
+.form_{
+    display:flex;
+    flex-direction:column;
+   padding-top: 5rem;
+   padding-left: 1.5rem;
+   padding-right: 1.5rem;
+    
+   }
+   .inputId{
+      margin: .6rem;
+       padding:.7rem; 
+   border: 2px  solid #B0AFFF;
+   
+   }
+   .name{
+    margin: .6rem;
+    padding:.7rem;
+    border: 2px  solid #B0AFFF;
+   }
+   .emailnew{
+    margin: .6rem;
+    padding:.7rem;
+    border: 2px  solid #B0AFFF;
+   }
+   .subject{
+       margin: .6rem;
+       padding:.7rem;
+       border: 2px  solid #B0AFFF;
+   }
+   
+   .description{
+       width: 17rem;
+       height: 4.5rem;
+       padding: .4rem .7rem;
+       margin-left:.75rem;
+       margin-top: .5rem;
+       font-family: "Gill Sans", sans-serif;
+       border: 2px  solid #B0AFFF;
+   }
+   .button{
+       height: 3rem;
+       width:7rem;
+       margin-top: 1rem;
+       margin-left: 3rem;
+       margin-bottom: 1rem;
+     
+   }
+   .newbutton{
+       display: inline;
+       align-items: center;
+   }
+   .draft_button{
+       height:2rem;
+       width:6rem;
+       margin-left: 20%;
+   }
+   .email_button{
+       height:2rem;
+       width:5rem;
+       margin-right: 10%;
+   }
+   .generateIdButton{
+       margin-left:13.80rem;
+       width:6rem;
+       display: flex;
+       
+   }
+   
